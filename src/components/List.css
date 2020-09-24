@@ -49,9 +49,3 @@ th, td {
     background-color: #ddd;
 }
 
-@media (max-width: 900px) {
-    .row h2 {
-        margin-left: 40px !important;    
-    }
-    
-}
