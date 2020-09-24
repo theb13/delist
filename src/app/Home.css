@@ -1,6 +1,6 @@
 .flex-container {
     display: flex;
-    max-width: 800px;
+    max-width: 1000px;
     min-height: 400px;
     box-shadow: 5px 5px rgba(17, 15, 15, 0.555);
 }
