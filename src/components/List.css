@@ -1,0 +1,34 @@
+.list {
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+    padding: 5px 20px;
+}
+
+.table {
+    flex-grow: 2;
+    width: 100%;
+   
+}
+.table-scroll{
+    overflow-x: auto;
+    max-height: 400px;
+}
+
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: start;
+
+}
+.list button {
+    border: none;
+    background-color: rgb(233, 209, 27);
+    border-radius: 5px;
+    outline: none;
+}
+
+.list i {
+    padding: 6px;
+}

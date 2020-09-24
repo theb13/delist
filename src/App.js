@@ -1,26 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+//css
+import './App.css'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+//components
+import Home from './app/Home'
+import '@fortawesome/fontawesome-free/css/all.css'
 
-export default App;
+import ReduxToastr from 'react-redux-toastr'
+import 'react-redux-toastr/lib/css/react-redux-toastr.min.css'
+
+export default props => (
+  <div>
+    <Home />
+    <ReduxToastr
+      timeOut={5000}
+      newestOnTop={false}
+      preventDuplicates={true}
+      position='top-center'
+      transitionIn='bounceInDown'
+      transitionOut='fadeOut'
+      progressBar
+    />
+  </div>
+)

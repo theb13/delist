@@ -1,0 +1,51 @@
+.form {
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.form-inputs {
+    flex-grow: 2;
+}
+
+input, textarea {
+    border: none;
+    outline: none;
+    background: none;
+    border-bottom: 2px solid black;
+    margin: 12px 5px ;
+    padding: 0px 10px;
+    font-size: 1rem;
+}
+
+.form-inputs input {
+    width: 48%;
+}
+
+textarea {
+    width: 97%;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.buttons button {
+    border-radius: 20px;
+    border: 1px solid #ff4b2b;
+    background-color: #ff4b2b;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 5px;
+    transition: transform 80ms ease-in;
+}
+.disable{
+    opacity: .6;
+    text-decoration: line-through;
+}
