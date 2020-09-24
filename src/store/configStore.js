@@ -5,12 +5,10 @@ import devReducer from './reducers/devReducer'
 import promise from 'redux-promise'
 import multi from 'redux-multi'
 import thunk from 'redux-thunk'
-import { reducer as formReducer } from 'redux-form'
 import {reducer as toastrReducer} from 'react-redux-toastr'
 const reducers = combineReducers(
     {
         devList: devReducer,
-        form: formReducer,
         toastr: toastrReducer
     })
 
