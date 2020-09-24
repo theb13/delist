@@ -17,7 +17,26 @@ export const getDev = (row) => {
         type: 'LIST_GET_DEV',
         payload: row
     }
+}
 
+function eachIndex(e, value) {
+    return e.name.toLowerCase().includes(value.toLowerCase())
+}
+
+export const searchDev = (value, data) => {
+    const list = data.filter(data => eachIndex(data, value))
+    console.log(list)
+
+    return {
+        type: 'SEARCH_DEV',
+        payload: { value, list:list }
+    }
+}
+export const changeSearch = (value) => {
+    return {
+        type: 'CHANGE_SEARCH_DEV',
+        payload: value
+    }
 }
 
 export const add = (values) => {

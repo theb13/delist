@@ -49,3 +49,9 @@ textarea {
     opacity: .6;
     text-decoration: line-through;
 }
+
+@media(max-width :796px){
+    input{
+        width: 97% !important;
+    }
+}
