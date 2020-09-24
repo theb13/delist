@@ -8,20 +8,19 @@
 .table {
     flex-grow: 2;
     width: 100%;
-   
 }
-.table-scroll{
+
+.table-scroll {
     overflow-x: auto;
     max-height: 400px;
 }
-
 
 th, td {
     padding: 10px;
     border-bottom: 1px solid #ddd;
     text-align: start;
-
 }
+
 .list button {
     border: none;
     background-color: rgb(233, 209, 27);
@@ -31,4 +30,21 @@ th, td {
 
 .list i {
     padding: 6px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: flex-end; */
+    /* justify-content: space-around; */
+}
+
+.row button {
+    align-self: center;
+    background: none;
+    box-shadow: 2px 2px whitesmoke;
+}
+
+.row button:hover {
+    background-color: #ddd;
 }

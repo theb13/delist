@@ -12,7 +12,6 @@ class List extends Component {
     }
     render() {
         const renderRows = () => {
-
             const list = this.props.list || []
             return list.map(row => (
                 <tr key={row._id}>
@@ -26,7 +25,10 @@ class List extends Component {
 
         return (
             <div className='list'>
-                <h2>Lista de devs</h2>
+                <div className="row">
+                    <h2>Lista de devs</h2>
+                    <button onClick={_=>this.props.get()}><i className="fa fa-undo"></i></button>
+                </div>
                 <div className="table-scroll">
                     <table className='table'>
                         <thead>
