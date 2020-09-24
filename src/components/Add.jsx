@@ -21,7 +21,7 @@ class Add extends Component {
                     <MaskInput
                         mask={'00-000-0000'} size={20} maskChar="_"
                         name='contactSecundary' placeholder="Contacto secundario" />
-                    <textarea name="Description" cols="" rows="3"
+                    <textarea name="description" cols="" rows="3"
                      required  placeholder="Descricão do dev..." />
                 </div>
                 <div className="buttons">
