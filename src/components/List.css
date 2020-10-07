@@ -23,7 +23,7 @@ th, td {
 
 .list button {
     border: none;
-    background-color: rgb(233, 209, 27);
+    background-color: #e9d11b;
     border-radius: 5px;
     outline: none;
 }
@@ -47,4 +47,10 @@ th, td {
 
 .row button:hover {
     background-color: #ddd;
+}
+
+.loadDiv{
+    position: absolute;
+    top: 45%;
+    left: 55%;
 }
