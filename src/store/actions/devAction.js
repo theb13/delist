@@ -11,7 +11,7 @@ const getData = () => {
         payload: request
     }
 }
-const loading=(load)=>{
+const loading=()=>{
     return {
         type: 'LIST_LOADING',
         payload: true
@@ -19,9 +19,8 @@ const loading=(load)=>{
 }
 
 export const get =()=>{
-    let load = true;
     return dispatch=>{
-        dispatch(loading(load))
+        dispatch(loading())
         dispatch(getData())
     }
 }
@@ -52,20 +51,24 @@ export const changeSearch = (value) => {
     }
 }
 
-export const add = (e) => {
-    e.preventDefault()
-    const formData = new FormData(e.target)
+export const add = (values) => {
+    values.preventDefault()
+    const formData = new FormData(values.target)
     const btn = document.querySelector('#btnSubmit')
+    const btnBack = document.querySelector('#btnBack')
+   
     const data = {}
     for (var pair of formData.entries()) {
         data[pair[0]] = pair[1]
     }
     return dispatch => {
+
         axios.post(Url, { ...data })
             .then(_ => {
                 toastr.success('Sucesso!', 'Operação realizada com sucesso.')
                 btn.disabled = true
                 btn.classList.add('disable')
+                btnBack.innerHTML='Ver na lista!'
             })
             .catch(_ => toastr.error('Falha!', 'Operação não realizada.'))
 

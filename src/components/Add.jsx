@@ -9,14 +9,16 @@ import { Link } from 'react-router-dom';
 import './Add.css'
 class Add extends Component {
    render() {
+       console.log(MaskInput)
         return (
+            
             <form className="form" onSubmit={v => this.props.add(v)}>
                 <h2>Cadastrar Dev</h2>
                 <div className="form-inputs">
                     <input type="text" name="name" placeholder="Nome" required minLength='5' />
                     <input type="email" name="email" placeholder="Email" required />
                     <MaskInput
-                        mask={'00-000-0000'} size={20} maskChar="_"
+                        mask={'00-000-0000'} size={20} maskChar="_" 
                         name='contactMain' placeholder="Contacto principal" required />
                     <MaskInput
                         mask={'00-000-0000'} size={20} maskChar="_"
@@ -25,7 +27,7 @@ class Add extends Component {
                      required  placeholder="Descricão do dev..." />
                 </div>
                 <div className="buttons">
-                    <Link to='/'><button >Cancelar</button></Link>
+                    <Link to='/' ><button id='btnBack'>Cancelar</button></Link>
                     <button type="submit" id='btnSubmit'>Registar</button>
                 </div>
             </form>
